@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>    
+    <title>slider</title>
+    <style>
+        body{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-auto-rows:33% 33% 33%;
+            grid-auto-columns: auto auto auto;
+            align-content: center;
+            background-color: #dfe6e9;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #slider{
+           
+            display: block;
+            width: 1000px;
+            height: auto;
+            grid-auto-columns: 100%;
+            grid-row: 2;
+            position: relative;
+            top: 100px !important;
+            border: 1px solid black;
+            }
+        #mypic,.active{
+            display: grid;
+            justify-content:center;
+            grid-auto-rows:70% 10% 10% 10%;
+            align-items:center;
+            justify-items: center;
+            width: 1000px;
+            height: 400px;
+            background-image:url(Screenshot.png);
+            background-size: 100% 100%;
+            transition: .9s ease-in-out;
+        }
+        #mypic2{
+            background-image:url(7.jpg);
+        }
+        #mypic3{
+            background-image:url(RWIljj.png);
+        }
+        h1,p{
+            grid-row: 2;
+            font-size: 25px;
+            color: rgb(221, 220, 220);
+        }
+        p{
+            grid-row: 3;
+        }
+        #ii{
+            display:grid; 
+            width: 1000px;
+            margin-top: 190px;
+            grid-template-rows: 100%;
+            grid-template-columns: 10% 10%;
+            justify-content: space-between;
+            justify-items: center;
+            grid-gap: 50%;
+            position: absolute;
+        }
+        #ii a{
+            display: grid;
+            margin: 0px;
+            color:rgb(221, 218, 218);
+            font-size: 40px;
+            text-decoration: none;
+        }
+        #ii a:hover{
+            color: rgb(180, 179, 179);
+        }
+        .active{
+            display: grid;
+        }
+       .hidden{
+            display: none !important;
+        }
+        #US{
+            position: absolute;
+            display: flex;
+            float: left;
+            width: 0;
+            left: 40%;
+            top: 70%;
+           transition: 2s ease;
+           bottom: 0;
+           /* margin-top: -30px;*/
+          
+        }
+        #slider:hover #US{
+            width: 100%;
+        }
+        #US b{
+            float: left;
+            margin-left: 10px;
+            font-size: 80px;
+            color: rgb(129, 129, 129); 
+        }
+        #US b:hover{
+            color: white;
+            cursor: pointer;
+        }
+        .activeb{
+            color: white !important;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="slider">
+            <div id="ii">
+                    <a href="#" id="left"><i class="fas fa-chevron-left" ></i></a>
+                    <a href="#" id="right"><i class="fas fa-chevron-right" ></i></a>
+            </div>
+            <div id="US"> <b id="b1" class="activeb">_</b><b id="b2">_</b><b id="b3">_</b></div>
+            <div id="mypic" class="S active">
+                <h1>My slider</h1>
+                <p>this is the first pic in my slider.</p>
+            </div>
+            <div id="mypic2" class="S hidden">
+                <h1>My slider</h1>
+                <p>this is the second pic in my slider.</p>
+            </div>
+            <div id="mypic3" class="S hidden">
+                    <h1>My slider</h1>
+                    <p>this is the third pic in my slider.</p>
+            </div>
+    </div>
+
+
+   
+    <script src="slider2.js"></script>
+</body>      
+</html>
